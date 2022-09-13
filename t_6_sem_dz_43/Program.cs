@@ -69,8 +69,11 @@ string PrintText(double [] array)
 
 double [] InterPoint(double [] arrayK, double [] arrayB)
 {
-//    y = arrayK[0]*x+arrayB[0];
-//    y = arrayK[1]*x+arrayB[1];
+    if (arrayK[0]==arrayK[1])
+    {
+        Console.WriteLine("Прямые параллельны!");
+        return null;
+    }
     double [] result = new double [2];
     //поиск  х
     double x = (arrayB[0]-arrayB[1])/(arrayK[1] - arrayK[0]);
